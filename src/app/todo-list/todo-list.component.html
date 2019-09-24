@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let todo of todos">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="todo.completed"
+        (change)="todoToggled.emit(todo)"
+      >
+
+      {{ todo.completed ? 'done' : 'active' }}
+
+      {{ todo.title }}
+    </label>
+  </li>
+</ul>

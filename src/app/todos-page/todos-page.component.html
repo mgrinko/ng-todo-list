@@ -1,0 +1,11 @@
+<p *ngIf="flag">
+  todos-page works!
+  {{ todos | activeTodos | length }}
+</p>
+
+<input type="checkbox" [(ngModel)]="flag">
+
+<app-todo-list
+  [todos]="todos"
+  (todoToggled)="toggleTodo($event)"
+></app-todo-list>
